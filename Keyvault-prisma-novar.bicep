@@ -16,8 +16,8 @@ module keyvaultModule 'vaults.bicep' = [for kv in keyVaults: {
     enableRbacAuthorization: kv.enableRbacAuthorization
     enabledForTemplateDeployment: kv.enabledForTemplateDeployment
     networkRuleBypass: kv.networkRuleBypass
-    enableSoftDelete: kv.enableSoftDelete
-    softDeleteRetentionInDays: kv.softDeleteRetentionInDays
-    enablePurgeProtection: kv.enablePurgeProtection
+    enableSoftDelete: true
+    softDeleteRetentionInDays: 7
+    enablePurgeProtection: true
   }
 }]
