@@ -79,10 +79,10 @@ resource keyvault 'Microsoft.KeyVault/vaults@2022-07-01' = {
     enabledForDeployment: enabledForDeployment
     enabledForDiskEncryption: enabledForDiskEncryption
     enabledForTemplateDeployment: enabledForTemplateDeployment
-    enableSoftDelete: enableSoftDelete
-    enablePurgeProtection: enablePurgeProtection ? true : null
+    enableSoftDelete: true
+    enablePurgeProtection: true
     enableRbacAuthorization: enableRbacAuthorization
-    softDeleteRetentionInDays: softDeleteRetentionInDays
+    softDeleteRetentionInDays: 7
     publicNetworkAccess: publicNetworkAccess
     networkAcls: {
       bypass: networkRuleBypass
